@@ -59,18 +59,28 @@ gem 'faker'
 
 While we are in the Gemfile, uncomment `gem 'rack-cors'`, then run 
 `bundle install`. If you recall, `rack-cors` is necessary for cross-origin
-resource sharing. To get rack-cors working, once the gem is installed, add the
-following to `config/application.rb` inside `class Application <
-Rails::Application` without replacing any other content:
+resource sharing. To get rack-cors working, once the gem is installed, uncomment the
+following code in `config/initializers/cors.rb`:
 
 ```rb
-config.middleware.insert_before 0, Rack::Cors do
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '*'
-    resource '*', headers: :any, methods: [:get, :post, :delete]
+    origins "*"
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
+
 ```
+The string after `origins` specifies which hosts will be allowed to make requests
+to your API. Your brand-new rails app probably comes with the string `"example.com"` there
+— change it to "*" to allow all hosts. In a production application, you might 
+want to specify a particular hostname.
+
+If you already have a rails server running, stop and restart it so that your 
+configuration changes can take effect.
 
 With these gems installed, use the following resource generators to create
 resources for this API:
