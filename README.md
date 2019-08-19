@@ -197,8 +197,8 @@ GET /trainers
 ```
 
 ### Adding a Pokemon
-* Note: When adding a new pokemon, the nickname should be generated using the Faker::Name gem and the
-species should be generated using the Faker::Games::Pokemon gem. See the seeds.rb file above as an example.
+* Note: When adding a new pokemon, the nickname should be generated using the `Faker::Name` gem and the
+species should be generated using the `Faker::Games::Pokemon` gem. See the seeds.rb file above as an example.
 
 ```text
 #=> Example Request
