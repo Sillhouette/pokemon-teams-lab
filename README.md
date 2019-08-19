@@ -36,8 +36,8 @@ task is to build towards the goals below by constructing both a Rails API and Ja
 The specific implementation for achieving these goals is left to you.
 
 - When a user loads the page, they should see all trainers, with their current team of Pokemon.
-- Whenever a user hits Add Pokemon and they have space on their team, they should get a new Pokemon.
-- Whenever a user hits Release Pokemon on a specific Pokemon team, that specific Pokemon should be 
+- Whenever a user hits "Add Pokemon" and they have space on their team, they should get a new Pokemon.
+- Whenever a user hits "Release Pokemon" on a specific Pokemon team, that specific Pokemon should be 
 released from the team.
 
 ## Backend
@@ -152,8 +152,8 @@ building out your frontend JavaScript:
 
 Remember that your user stories are:
 - When a user loads the page, they should see all trainers, with their current team of Pokemon.
-- Whenever a user hits Add Pokemon and they have space on their team, they should get a new Pokemon.
-- Whenever a user hits Release Pokemon on a specific Pokemon team, that specific Pokemon should be
+- Whenever a user hits "Add Pokemon" and they have space on their team, they should get a new Pokemon.
+- Whenever a user hits "Release Pokemon" on a specific Pokemon team, that specific Pokemon should be
 released from the team.
 
 You should build out just enough of your Rails API to achieve the above. You _should not_ build out full
